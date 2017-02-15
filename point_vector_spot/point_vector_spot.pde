@@ -1,3 +1,5 @@
+/* This program displays a moving red sphere using the Point, Vector and Spot clasees. */
+
 Point a;
 Vector v;
 Spot p;
