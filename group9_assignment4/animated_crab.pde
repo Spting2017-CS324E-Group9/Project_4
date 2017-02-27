@@ -33,6 +33,7 @@ class animated_crab {
     if (amt < 1) {
       float toe_dx = lerp (100, 110, amt);
       a_crab = a_crab.update (a_crab.eye_center, toe_dx, a_crab.elbow, a_crab.crab_color);
+
     } else {
       float toe_dx = lerp (100, 110, 2 - amt);
       a_crab = a_crab.update (a_crab.eye_center, toe_dx, a_crab.elbow, a_crab.crab_color);

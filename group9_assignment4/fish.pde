@@ -1,5 +1,3 @@
-
-
 class fish {
   
   color fishcolor;
@@ -86,7 +84,7 @@ class fish {
 
       myFish.rotate(r); 
       myFish2.rotate(r2);
-      background(background);
+      //background(background);
       shape(myFish); 
       shape(myFish2);
 
