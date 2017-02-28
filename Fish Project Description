@@ -1,1 +1,0 @@
-Then we have the fish class. Originally we intended to have the fish move its tail as it jumped over the ocean but instead Dennis had a class function called “finMove” which translated the main fin back and forth. The fish class also has a “move” function which when called in the draw loop makes a fish object rotate in a circle behind the wave objects. 
