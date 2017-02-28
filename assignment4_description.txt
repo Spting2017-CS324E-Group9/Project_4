@@ -1,5 +1,0 @@
-﻿The overall goal of the project was to animate a beach scene to include waves, clouds, fish, and crabs.
-
-Chris created the animated_crab class, which calls on the crab, crab_claw, crab_leg, and crab_eye classes. The overall shape of each crab is formed using a bunch of grouped PShapes, and the animation is done using lerps.
-
-Then we have the fish class, which Dennis created. Originally we intended to have the fish move its tail as it jumped over the ocean but instead Dennis had a class function called “finMove” which translated the main fin back and forth. The fish class also has a “move” function which when called in the draw loop makes a fish object rotate in a circle behind the wave objects. 

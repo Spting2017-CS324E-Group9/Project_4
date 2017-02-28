@@ -1,0 +1,15 @@
+﻿The overall goal of the project was to animate a beach scene to include waves, clouds, fish, and crabs.
+
+Jacob created the Blobby class, and the clouds and waves are methods of that class.
+The Blobbies are a group of 10 primitives, one central core and 9 nine humps that
+are randomized for each blobby and are some percentage of the core in size. 
+The blobbies move in a few different ways. The blobbies take in the x position and
+using a method called y_pos return a yposition of the cloud using a lagrange 
+polynomial. The lagrange polynomial uses an arc value which describes the vertex of the 
+blobbies parabolic path. The 9 humps also rotate around the core at rate known as rot of the blobby while the core
+remains staionary relative to its x position. The cloud and wave methods of blobbies have different paths, rotation 
+speeds and colors.
+
+Chris created the animated_crab class, which calls on the crab, crab_claw, crab_leg, and crab_eye classes. The overall shape of each crab is formed using a bunch of grouped PShapes, and the animation is done using lerps.
+
+Then we have the fish class, which Dennis created. Originally we intended to have the fish move its tail as it jumped over the ocean but instead Dennis had a class function called “finMove” which translated the main fin back and forth. The fish class also has a “move” function which when called in the draw loop makes a fish object rotate in a circle behind the wave objects. 
