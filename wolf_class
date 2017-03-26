@@ -1,0 +1,53 @@
+class wolf {
+    PImage body;
+    int x;
+    int y;
+    PVector vec;
+    wolf (int init_x, int init_y, PImage look) {
+      x = init_x;
+      y = init_y;
+      vec = new PVector (1, 1);
+      body = look;
+      body.resize (60, 40);
+    }
+    
+    
+    void display () {
+      //if (vec.x > 0) {
+      //  pushMatrix ();
+      //  translate (0, 0);
+      //  scale (-1, 1);
+      //  translate (this.x, this.y);
+      //  image (this.body, 0, 0);
+      //  popMatrix ();
+      //}
+      //else {
+        image (this.body, this.x, this.y);
+      //}
+    }
+   
+    void move () {
+      this.vec.setMag (2);
+      this.x += vec.x;
+      this.y += vec.y;
+    }
+    
+    void checkForSheep (float[][] loc) {
+      for (int i = 0; i < loc.length - 3; i++) {
+        if (dist (this.x, this.y, loc[i][0], loc[i][1]) < 500) {
+          PVector sheep_vec = new PVector (loc[i][0] - this.x, loc[i][1] - this.y);
+          sheep_vec.normalize ();
+          this.vec.add (sheep_vec);
+        }
+      }
+    }
+    
+    void checkForShepherd (float[][] loc) {
+      if (dist (this.x, this.y, loc[9][0], loc[9][1]) < 500) {
+        PVector shepherd_vec = new PVector (loc[9][0] - this.x, loc[9][1] - this.y);
+        shepherd_vec.normalize ();
+        this.vec.add (shepherd_vec);
+      }
+    }
+    
+}
