@@ -1,0 +1,15 @@
+wolf w;
+PImage wolf_look;
+
+void setup () {
+  wolf_look = loadImage ("wolf.png");
+  w = new wolf (100, 100, wolf_look);
+}
+
+void draw () {
+  w.display ();
+  w.checkForSheep (loc);
+  w.checkForShepherd (loc);
+  w.move ();
+
+}
